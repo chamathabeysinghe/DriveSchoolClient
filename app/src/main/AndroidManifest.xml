@@ -13,7 +13,9 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- <uses-feature android:name="android.hardware.camera.autofocus"/> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- <uses-feature android:name="android.hardware.camera.autofocus"/> -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,6 +23,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
         <activity
             android:name=".ProfileActivity"
             android:label="@string/app_name"
@@ -31,7 +37,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QRActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -51,6 +56,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.startup.driveschoolclient.ProfileActivity" />
         </activity>
+        <activity android:name=".QRScannerActivity" />
+        <activity android:name=".HistoryActivity"></activity>
     </application>
 
 </manifest>

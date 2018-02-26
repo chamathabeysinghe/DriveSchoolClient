@@ -19,6 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.startup.driveschoolclient.util.Config;
+import com.startup.driveschoolclient.util.ServerConnection;
 
 public class ProfileActivity extends AppCompatActivity {
     TextView mTextView;
@@ -35,7 +36,7 @@ public class ProfileActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProfileActivity.this,SessionActivity.class);
+                Intent intent = new Intent(ProfileActivity.this,QRScannerActivity.class);
                 startActivity(intent);
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
@@ -43,8 +44,8 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         mTextView = findViewById(R.id.textView);
+        ServerConnection.init(this);
 
-        RequestQueue queue = Volley.newRequestQueue(this);
         String url = Config.baseUrl + "users/mobile";
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(
@@ -66,7 +67,7 @@ public class ProfileActivity extends AppCompatActivity {
                 }
         );
 
-        queue.add(stringRequest);
+        ServerConnection.sendMessage(stringRequest);
 
     }
 
