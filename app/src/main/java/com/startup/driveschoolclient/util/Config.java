@@ -7,5 +7,5 @@ package com.startup.driveschoolclient.util;
 public class Config {
 
     public static final String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhN2ZkODE4OWVlNTNkMmI2NjZiNzM3YSIsInJvbGUiOiJkcml2ZXIiLCJ1c2VyIjp7Il9pZCI6IjVhN2ZkODE4OWVlNTNkMmI2NjZiNzM3YSIsImVtYWlsIjoiYWJleXNpbmdoZWNoYW1hdGhAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMDgkT0tKYjBPZFYwN09uZXZEaTBDR0MzLlVUSHRYc2ZSZzFPUVZmNXJlSVI5N1NtU1E5NTIvcFciLCJyb2xlIjoiZHJpdmVyIiwibmFtZSI6IkNoYW1hdGggQWJleXNpbmdoZSIsInBob25lIjo3MTI4MDMxMjUsInBpY3R1cmUiOiJodHRwczovL2F2YXRhcnMyLmdpdGh1YnVzZXJjb250ZW50LmNvbS91Lzc5MjI3Njc_cz00NjAmdj00IiwiX192IjowLCJsZWFybktpdHMiOltdLCJsYXN0VXBkYXRlIjoiMjAxOC0wMi0xMVQwNTo0ODoxOC44ODlaIiwiZW5hYmxlIjp0cnVlfSwiaWF0IjoxNTE4MzI4MzIzLCJleHAiOjE1MTg0MTQ3MjN9.kIdi-m4_iEAmQYiwsH0HCs3GN7eoWD-ydkpPPX4X3KE";
-    public static final String baseUrl = "http://192.168.8.101:3000/";
+    public static final String baseUrl = "http://192.168.8.100:3000/";
 }

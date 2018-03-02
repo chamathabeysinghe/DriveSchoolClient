@@ -22,28 +22,28 @@ import com.startup.driveschoolclient.util.Config;
 import com.startup.driveschoolclient.util.ServerConnection;
 
 public class ProfileActivity extends AppCompatActivity {
-    TextView mTextView;
+//    TextView mTextView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProfileActivity.this,QRScannerActivity.class);
+                Intent intent = new Intent(ProfileActivity.this,GoalsActivity.class);
                 startActivity(intent);
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
             }
         });
 
-        mTextView = findViewById(R.id.textView);
+//        mTextView = findViewById(R.id.textView);
         ServerConnection.init(this);
 
         String url = Config.baseUrl + "users/mobile";
@@ -55,14 +55,14 @@ public class ProfileActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
-                        mTextView.setText("Response is: " + response);
+//                        mTextView.setText("Response is: " + response);
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.e("Error",error.getMessage());
-                        mTextView.setText("That didn't work!");
+//                        mTextView.setText("That didn't work!");
                     }
                 }
         );

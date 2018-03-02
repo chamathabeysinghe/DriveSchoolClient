@@ -57,7 +57,9 @@
                 android:value="com.startup.driveschoolclient.ProfileActivity" />
         </activity>
         <activity android:name=".QRScannerActivity" />
-        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".SessionDetailsActivity" />
+        <activity android:name=".GoalsActivity"></activity>
     </application>
 
 </manifest>
